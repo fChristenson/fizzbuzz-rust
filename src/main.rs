@@ -1,6 +1,7 @@
 use std::io::{self, BufRead};
 
 fn main() {
+    println!("Fizzbuzz, input number!");
     let stdin = io::stdin();
     for line in stdin.lock().lines() {
         match line {
