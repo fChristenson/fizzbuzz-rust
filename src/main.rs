@@ -2,7 +2,9 @@ use std::io::{self, BufRead};
 
 fn main() {
     println!("Fizzbuzz, input number!");
+
     let stdin = io::stdin();
+
     for line in stdin.lock().lines() {
         match line {
             Ok(line) => {
@@ -18,7 +20,7 @@ fn main() {
 }
 
 fn fizz_buzz(number: u32) {
-    for index in 0..number {
+    for index in 0..number + 1 {
         if index % 3 == 0 && index % 5 == 0 {
             println!("Fizzbuzz")
         } else if index % 5 == 0 {
